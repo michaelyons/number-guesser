@@ -1,0 +1,108 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+/* General font info above for entire page unless specified below */
+
+header { 
+  background: #404041;
+  font-size: 3.0em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.title-number {
+  color: #ED458B;
+  font-weight: 700;
+}
+
+.title-guesser { 
+  color: #E6E7E8;
+}
+/* Styling for header above including font color and padding used for central positioning */
+
+input {
+  color: #929497;
+  display: block;
+  font-size: 100%;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 270px;
+}
+
+input:focus {
+  outline: 0;
+}
+/* Removes gray outline around input box */
+
+div {
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.all-buttons {
+  background: #929497;
+  border-radius: 20px;
+  color: #FFFFFF;
+  padding: 5px 60px;
+  border: none;
+}
+/* Styling for all buttons on page */
+
+section {
+  text-align: center;
+  font-weight: 300;
+}
+
+.center-text {
+  font-weight: 300;  
+}
+
+.guessed-display {
+  font-size: 10.0em;
+  font-weight: 300;
+  margin: -20px;
+  color: #EB008B;
+}
+/* Styling for number guessed into the input box */
+
+.that-is-box {
+  font-weight: 300;
+}
+
+button:active {
+  background-color: #929497;
+}
+
+button:disabled {
+  background-color: #D0D2D3;
+}
+button:disabled:hover {
+  background-color: #D0D2D3;
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: 0;
+}
+/* Removes gray outline around all buttons */
+
+button:hover {
+  background: #EB008B; 
+  color: #FFFFFF;
+}
+
+.guessDisabled:hover {
+  background: #D0D2D3;
+  color: #FFFFFF;
+}
+
+.resetDisabled:hover {
+  background: #D0D2D3;
+  color: #FFFFFF;
+}
+

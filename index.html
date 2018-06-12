@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Michael's Number Guesser</title>
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+      <link rel="M icon" href="favicon.ico" type="image/x-icon">
+    </head>
+  <body>
+      <header> 
+        <span class="title-number">Number</span><span class="title-guesser"> Guesser</span>
+      </header>
+    <main>
+      <form>
+          <input class="input" type="number" name="enter" placeholder="Enter a number between 1 and 100" min="1" max="100">
+        <div>
+          <button class="all-buttons" id="guess">Guess</button>
+          <button class="all-buttons" id="clear">Clear</button>
+        </div>
+      </form>
+      <section>
+        <h3 class="center-text"></h3>
+        <h3 class="guessed-display"></h3>
+        <h3 class="that-is-box"></h3>
+        <button class="all-buttons" id="reset">Reset</button>
+      </section>
+    </main>
+    <script src="code.js"></script>
+  </body>
+</html>
