@@ -8,13 +8,32 @@ var thatIsText = document.querySelector('.that-is-box');
 var secretNumber;
 
 window.addEventListener('load', getRandomArbitrary, disableButtons());
+textInput.addEventListener('keypress', enableButtons);
+guessButton.addEventListener('click', function() {
+  var guessedValue = parseInt(textInput.value);
+  guessedText.innerText = guessedValue;
+  comparingGuessInput();
+  event.preventDefault();
+});
+clearButton.addEventListener('click', function () {
+  centerText.innerText = '';
+  guessedText.innerText = '';
+  thatIsText.innerText = '';
+  textInput.value = '';
+  guessButton.disabled = true;
+  clearButton.disabled = true;
+});
+resetButton.addEventListener('click', function() {
+  centerText.innerText = '';
+  guessedText.innerText = '';
+  thatIsText.innerText = '';
+  textInput.value = '';
+  getRandomArbitrary();
+});
 
 function getRandomArbitrary() {
   secretNumber = Math.floor(Math.random() * (100 - 1) + 1);
-  console.log(secretNumber);
 }
-
-textInput.addEventListener('keypress', enableButtons);
 
 function enableButtons() {
   guessButton.disabled = false;
@@ -46,27 +65,3 @@ function comparingGuessInput() {
     thatIsText.innerText = "That is too low";
   } 
 }
-
-guessButton.addEventListener('click', function() {
-  var guessedValue = parseInt(textInput.value);
-  guessedText.innerText = guessedValue;
-  comparingGuessInput();
-  event.preventDefault();
-});
-
-clearButton.addEventListener('click', function () {
-  centerText.innerText = '';
-  guessedText.innerText = '';
-  thatIsText.innerText = '';
-  textInput.value = '';
-  guessButton.disabled = true;
-  clearButton.disabled = true;
-});
-
-resetButton.addEventListener('click', function() {
-  centerText.innerText = '';
-  guessedText.innerText = '';
-  thatIsText.innerText = '';
-  textInput.value = '';
-  getRandomArbitrary();
-});
